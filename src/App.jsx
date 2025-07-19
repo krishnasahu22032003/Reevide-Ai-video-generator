@@ -1,6 +1,7 @@
 
 import AIAvatarSection from './components/AIAvatarSection'
 import CTASection from './components/CTASection'
+import Footer from './components/Footer '
 import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
 import Navbar from './components/Navbar'
@@ -25,6 +26,7 @@ function App() {
 <TestimonialsSection/>
 <HowItWorks/>
 <CTASection/>
+<Footer/>
 
     </main>
     </>
