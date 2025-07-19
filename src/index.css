@@ -1,5 +1,35 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Light Theme (default) */
+  --color-primary: #ffffff;
+  --color-primary-dark: #000000;
+  --bg-gradient: none;
+}
+
+/* Dark Theme Overrides */
+.dark {
+  --color-primary: linear-gradient(135deg, #0f0f0f, #1a1a1a); /* smooth black gradient */
+  --color-primary-dark: #ffffff;
+  --bg-gradient: linear-gradient(135deg, #111111, #1e1e1e);
+}
+
+@layer utilities {
+  .bg-primary {
+    background: var(--color-primary);
+  }
+
+  .text-primary-dark {
+    color: var(--color-primary-dark);
+  }
+
+  .bg-gradient-theme {
+    background: var(--bg-gradient);
+  }
+}
+
 @layer base {
   :root {
     --font-main: ABCFavorit, sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans;
