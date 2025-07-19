@@ -1,6 +1,7 @@
 
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import PricingSection from './components/PricingSection '
 import ResourcesSection from './components/ResourcesSection '
 import SolutionsSection from './components/SolutionsSection'
 import TrustedBySection from './components/TrustedBySection'
@@ -15,6 +16,7 @@ function App() {
 <TrustedBySection/>
 <SolutionsSection/>
 <ResourcesSection/>
+<PricingSection/>
 
     </main>
     </>
