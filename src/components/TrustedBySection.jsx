@@ -49,7 +49,7 @@ const TrustedBySection = () => {
           {/* Mute Button */}
           <button
             onClick={toggleMute}
-            className="absolute bottom-6 left-6 z-20 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full backdrop-blur-sm transition"
+            className="absolute cursor-pointer bottom-6 left-6 z-20 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full backdrop-blur-sm transition"
           >
             {isMuted ? <HiSpeakerXMark size={26} /> : <HiSpeakerWave size={26} />}
           </button>

@@ -26,7 +26,7 @@ const Navbar = () => {
   const navItems = ['Platform', 'Solutions', 'Resources', 'Pricing', 'Enterprise', 'Company'];
 
   return (
-    <nav className="w-full fixed top-0 z-50 px-6 py-5 flex items-center justify-between bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
+    <nav className="w-full fixed top-0 z-50 px-6 py-4 flex items-center justify-between bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
       
       {/* Left: Logo + Nav Items */}
       <div className="flex items-center gap-6">
@@ -89,9 +89,12 @@ const Navbar = () => {
 
       {/* Mobile Menu Toggle */}
       <div className="md:hidden">
-        <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
-        </button>
+<button
+  onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+  className="text-black dark:text-white transition-colors"
+>
+  {isMobileMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+</button>
       </div>
 
       {/* Mobile Dropdown */}

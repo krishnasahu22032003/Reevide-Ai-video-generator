@@ -38,16 +38,20 @@ const Hero = () => {
   }, []);
 
   return (
-    <section  id="home" className="w-full min-h-screen flex items-center justify-center relative overflow-hidden px-6 bg-white dark:bg-gradient-to-b dark:from-[#0e0e0e] dark:to-[#151515] transition-colors">
+    <section
+      id="home"
+      className="w-full min-h-screen flex items-center justify-center relative overflow-hidden px-6 bg-white dark:bg-gradient-to-b dark:from-[#0e0e0e] dark:to-[#151515] transition-colors"
+    >
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 z-10">
         {/* Left Text */}
         <div className="flex flex-col justify-start items-start gap-3 text-left pt-6 md:pt-12 md:pl-6">
           {/* Glowing Dot + Tagline */}
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-blue-500 shadow-blue-500 shadow-md animate-ping-slow" />
-            <p className="text-sm uppercase tracking-wide font-semibold text-black dark:text-blue-400">
-              2025 #1 Fastest Growing Product by G2
-            </p>
+          <div className="flex items-center pt-8 gap-2">
+            <span className="h-2 w-2 rounded-full   bg-blue-500 shadow-blue-500 shadow-md animate-ping-slow" />
+     <p className="text-xs sm:text-sm uppercase tracking-wide font-semibold text-black dark:text-blue-400 break-words  sm:pt-0 z-10 relative">
+  2025 #1 Fastest Growing Product by G2
+</p>
+
           </div>
 
           {/* Heading and sublines */}
@@ -59,7 +63,7 @@ const Hero = () => {
           </p>
 
           {/* Paragraph */}
-          <p className="mt-3 text-gray-600 dark:text-gray-300 text-base md:text-lg max-w-lg">
+          <p className="mt-1 text-gray-600 dark:text-gray-300 text-base md:text-lg max-w-lg">
             Just describe your idea or upload your image. Our AI video generator writes the script,
             voices the lines, and edits the entire video. Whether it’s a TikTok ad, product demo,
             explainer, or tutorial — turn any text, image, or audio into a complete video in minutes.
@@ -80,41 +84,39 @@ const Hero = () => {
             playsInline
             className="rounded-xl w-full h-auto max-h-[900px] shadow-xl relative z-10"
           />
-{isDark && (
-  <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 w-[400px] h-[200px] rounded-full bg-gradient-to-r from-indigo-500 via-pink-500 to-purple-600 blur-[80px] opacity-70 z-[-1]" />
-)}
+          {isDark && (
+            <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 w-[400px] h-[200px] rounded-full bg-gradient-to-r from-indigo-500 via-pink-500 to-purple-600 blur-[80px] opacity-70 z-[-1]" />
+          )}
         </div>
       </div>
 
-      {/* Bottom Tech Bar */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden z-30">
+      {/* Bottom Tech Bar - Only visible on large screens */}
+      <div className="hidden lg:block absolute bottom-0 left-0 w-full overflow-hidden z-30">
         <div className="relative w-full">
           <div className="absolute inset-0 dark:bg-transparent bg-gradient-to-r from-transparent via-gray-100/5 to-transparent backdrop-blur-2xl rounded-t-xl pointer-events-none" />
           <motion.div
-            className="flex items-center gap-28 py-5 px-12 whitespace-nowrap relative z-10"
-            animate={{ x: ["100%", "-100%"] }}
-            transition={{ repeat: Infinity, duration: 120, ease: "linear" }}
+            className="flex items-center gap-28 py-5 px-12 whitespace-nowrap relative z-10 will-change-transform"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
           >
-            {Array.from({ length: 3 }).flatMap((_, i) =>
-              techItems.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={`${i}-${index}`}
-                    className="flex flex-col items-center transition-all duration-300 opacity-60 hover:opacity-100 group cursor-pointer"
+            {[...techItems, ...techItems].map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={index}
+                  className="flex flex-col items-center transition-all duration-300 opacity-60 hover:opacity-100 group cursor-pointer"
+                >
+                  <Icon
+                    className={`text-4xl transition-all duration-300 dark:bg-transparent bg-white text-gray-400 group-hover:${item.color}`}
+                  />
+                  <span
+                    className={`text-sm mt-1 text-gray-400 group-hover:${item.color}`}
                   >
-                    <Icon
-                      className={`text-4xl transition-all duration-300 dark:bg-transparent bg-white text-gray-400 group-hover:${item.color}`}
-                    />
-                    <span
-                      className={`text-sm mt-1 text-gray-400 group-hover:${item.color}`}
-                    >
-                      {item.name}
-                    </span>
-                  </div>
-                );
-              })
-            )}
+                    {item.name}
+                  </span>
+                </div>
+              );
+            })}
           </motion.div>
         </div>
       </div>
