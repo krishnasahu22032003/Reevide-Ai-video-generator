@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-main: ABCFavorit, sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans;
+  }
+
+  body {
+    font-family: var(--font-main);
+  }
+}
