@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { FaQuoteLeft } from "react-icons/fa";
 
 const testimonials = [
@@ -46,15 +45,10 @@ const TestimonialSection = () => {
       {/* Testimonial Cards Grid */}
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {testimonials.map((item, idx) => (
-          <motion.div
+          <div
             key={idx}
-            whileHover={{ scale: 1.04 }}
-            transition={{ type: "spring", stiffness: 120 }}
-            className="group relative bg-white/80 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-8 shadow-2xl hover:shadow-pink-500/30 transition-all duration-300 overflow-hidden"
+            className="relative bg-white/80 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-8 shadow-2xl overflow-hidden"
           >
-            {/* Glow border on hover */}
-            <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-pink-400/60 transition-all duration-300 pointer-events-none" />
-
             {/* Quote icon */}
             <FaQuoteLeft className="text-4xl text-pink-500 dark:text-indigo-400 mb-4 opacity-80" />
 
@@ -65,11 +59,14 @@ const TestimonialSection = () => {
 
             {/* User Info */}
             <div className="flex items-center gap-4 mt-auto">
-              <img
-                src={item.img}
-                alt={item.name}
-                className="w-14 h-14 rounded-full border-2 border-pink-400 object-cover"
-              />
+              <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-pink-400 bg-gray-200 dark:bg-gray-700">
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+              </div>
               <div>
                 <h4 className="font-semibold text-black dark:text-white">
                   {item.name}
@@ -77,7 +74,7 @@ const TestimonialSection = () => {
                 <p className="text-sm text-gray-500 dark:text-gray-400">{item.role}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

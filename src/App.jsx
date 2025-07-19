@@ -1,6 +1,7 @@
 
 import AIAvatarSection from './components/AIAvatarSection'
 import Hero from './components/Hero'
+import HowItWorks from './components/HowItWorks'
 import Navbar from './components/Navbar'
 import PricingSection from './components/PricingSection '
 import ResourcesSection from './components/ResourcesSection '
@@ -21,6 +22,7 @@ function App() {
 <PricingSection/>
 <AIAvatarSection/>
 <TestimonialsSection/>
+<HowItWorks/>
 
     </main>
     </>

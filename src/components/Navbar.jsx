@@ -46,12 +46,12 @@ const Navbar = () => {
           {navItems.map(item => (
             <button
               key={item}
-              className="group flex items-center gap-1 transition hover:text-black dark:hover:text-white"
+              className="group flex cursor-pointer  items-center gap-1 transition hover:text-black dark:hover:text-white"
             >
               <span className="group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500 group-hover:bg-clip-text group-hover:text-transparent">
                 {item}
               </span>
-              <FaChevronDown size={12} className="text-gray-500 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-100" />
+              <FaChevronDown size={12} className="text-gray-500 cursor-pointer  dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-100" />
             </button>
           ))}
         </div>
@@ -59,22 +59,22 @@ const Navbar = () => {
 
       {/* Right: Desktop Actions */}
       <div className="hidden md:flex items-center gap-4 text-sm font-medium text-gray-600 dark:text-gray-300">
-        <button className="flex items-center gap-1 cursor-default">
+        <button className="flex cursor-pointer  items-center gap-1 cursor-default">
           <IoMdGlobe size={18} />
           English
         </button>
 
         <button
           onClick={toggleTheme}
-          className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+          className="p-2 cursor-pointer  rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition"
         >
           {theme === 'light' ? <FaMoon size={16} /> : <FaSun size={16} />}
         </button>
 
-        <button className="px-5 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-full font-medium hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white transition">
+        <button className="px-5 py-2 cursor-pointer  bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-full font-medium hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white transition">
           Login
         </button>
-        <button className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black border dark:border-gray-400 rounded-full font-semibold hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white transition">
+        <button className="px-4 py-2 cursor-pointer  bg-black text-white dark:bg-white dark:text-black border dark:border-gray-400 rounded-full font-semibold hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white transition">
           Sign Up for free
         </button>
       </div>

@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
-
+/* index.css or globals.css */
+html {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
 @theme {
   /* Light Theme (default) */
   --color-primary: #ffffff;
