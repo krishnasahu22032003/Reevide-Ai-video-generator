@@ -59,7 +59,7 @@ const Navbar = () => {
 
       {/* Right: Desktop Actions */}
       <div className="hidden md:flex items-center gap-4 text-sm font-medium text-gray-600 dark:text-gray-300">
-        <button className="flex cursor-pointer  items-center gap-1 cursor-default">
+        <button className="flex cursor-pointer  items-center gap-1 ">
           <IoMdGlobe size={18} />
           English
         </button>
