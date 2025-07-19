@@ -27,7 +27,10 @@ const testimonials = [
 
 const TestimonialSection = () => {
   return (
-    <section className="relative w-full px-6 md:px-16 py-32 bg-white dark:bg-[#0b0b0b] overflow-hidden">
+    <section
+      id="company"
+      className="relative w-full px-6 md:px-16 py-32 bg-white dark:bg-[#0b0b0b] overflow-hidden"
+    >
       {/* Background Glow Blobs */}
       <div className="absolute -top-40 -left-40 w-[400px] h-[400px] bg-pink-400 opacity-20 rounded-full blur-[160px] pointer-events-none z-0" />
       <div className="absolute -bottom-40 -right-40 w-[400px] h-[400px] bg-indigo-400 opacity-20 rounded-full blur-[160px] pointer-events-none z-0" />
@@ -42,29 +45,26 @@ const TestimonialSection = () => {
         </p>
       </div>
 
-      {/* Testimonial Cards Grid */}
+      {/* Cards */}
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {testimonials.map((item, idx) => (
           <div
             key={idx}
-            className="relative bg-white/80 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-8 shadow-2xl overflow-hidden"
+            className="relative bg-white/80 dark:bg-white/5 backdrop-blur-lg border border-gray-200 dark:border-white/10 rounded-3xl p-8 shadow-xl"
           >
-            {/* Quote icon */}
             <FaQuoteLeft className="text-4xl text-pink-500 dark:text-indigo-400 mb-4 opacity-80" />
-
-            {/* Feedback */}
             <p className="text-lg text-gray-800 dark:text-gray-300 mb-6 leading-relaxed">
               "{item.feedback}"
             </p>
 
-            {/* User Info */}
-            <div className="flex items-center gap-4 mt-auto">
-              <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-pink-400 bg-gray-200 dark:bg-gray-700">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 min-w-14 min-h-14 rounded-full overflow-hidden border-2 border-pink-400 bg-gray-200 dark:bg-gray-700">
                 <img
                   src={item.img}
                   alt={item.name}
                   className="w-full h-full object-cover"
-                  loading="eager"
+                  width={56}
+                  height={56}
                 />
               </div>
               <div>

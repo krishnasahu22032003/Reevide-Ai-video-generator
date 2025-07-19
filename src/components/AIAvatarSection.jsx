@@ -24,7 +24,7 @@ const AIAvatarSection = () => {
   };
 
   return (
-    <section className="w-full px-6 md:px-16 py-28 bg-white dark:bg-[#0b0b0b] relative overflow-hidden">
+    <section id="enterprise" className="w-full px-6 md:px-16 py-28 bg-white dark:bg-[#0b0b0b] relative overflow-hidden">
       {/* Glowing Background */}
       <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[140%] h-[280px] bg-gradient-to-r from-indigo-300 via-pink-300 to-purple-300 dark:from-indigo-600 dark:via-pink-600 dark:to-purple-600 blur-[120px] opacity-20 dark:opacity-30 z-0" />
 

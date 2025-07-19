@@ -43,17 +43,25 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6 text-[17px] font-medium text-gray-700 dark:text-gray-300">
-          {navItems.map(item => (
-            <button
-              key={item}
-              className="group flex cursor-pointer  items-center gap-1 transition hover:text-black dark:hover:text-white"
-            >
-              <span className="group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500 group-hover:bg-clip-text group-hover:text-transparent">
-                {item}
-              </span>
-              <FaChevronDown size={12} className="text-gray-500 cursor-pointer  dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-100" />
-            </button>
-          ))}
+         {navItems.map(item => {
+  const id = item.toLowerCase(); // e.g., 'Platform' → 'platform'
+  return (
+    <a
+      key={item}
+      href={`#${id}`}
+      className="group flex items-center gap-1 transition hover:text-black dark:hover:text-white cursor-pointer"
+    >
+      <span className="group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500 group-hover:bg-clip-text group-hover:text-transparent">
+        {item}
+      </span>
+      <FaChevronDown
+        size={12}
+        className="text-gray-500 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-100"
+      />
+    </a>
+  );
+})}
+
         </div>
       </div>
 

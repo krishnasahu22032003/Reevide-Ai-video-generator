@@ -53,7 +53,7 @@ const PricingSection = () => {
   const [billing, setBilling] = useState("monthly");
 
   return (
-    <section className="relative w-full py-28 px-6 md:px-16 bg-white dark:bg-[#0b0b0b] text-gray-900 dark:text-white transition-colors duration-500">
+    <section  id="pricing"className="relative w-full py-28 px-6 md:px-16 bg-white dark:bg-[#0b0b0b] text-gray-900 dark:text-white transition-colors duration-500">
       {/* Gradient Glow */}
       <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[120%] h-72 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 dark:from-pink-500 dark:via-purple-500 dark:to-indigo-500 blur-[140px] opacity-20 dark:opacity-30 z-0" />
 

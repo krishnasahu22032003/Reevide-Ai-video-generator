@@ -13,7 +13,7 @@ const TrustedBySection = () => {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-white dark:bg-[#0b0b0b] text-black dark:text-white">
+    <section id="platform" className="relative w-full overflow-hidden bg-white dark:bg-[#0b0b0b] text-black dark:text-white">
       {/* Top decorative gradient glow */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[80%] h-32 bg-gradient-to-r from-indigo-500 via-pink-500 to-purple-500 blur-[100px] opacity-40 z-10 pointer-events-none" />
 

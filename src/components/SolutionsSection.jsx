@@ -43,7 +43,7 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <section className="relative w-full py-24 px-6 md:px-20 bg-white dark:bg-[#0b0b0b] text-black dark:text-white overflow-hidden">
+    <section id="solutions" className="relative w-full py-24 px-6 md:px-20 bg-white dark:bg-[#0b0b0b] text-black dark:text-white overflow-hidden">
       {/* Top Gradient Glow */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[90%] h-40 bg-gradient-to-r from-indigo-500 via-pink-500 to-purple-500 blur-[120px] opacity-30 z-0 pointer-events-none" />
 

@@ -27,7 +27,7 @@ const resources = [
 
 const ResourcesSection = () => {
   return (
-    <section className="relative w-full py-28 px-6 md:px-20 bg-white dark:bg-[#0b0b0b] text-black dark:text-white overflow-hidden">
+    <section id="resources" className="relative w-full py-28 px-6 md:px-20 bg-white dark:bg-[#0b0b0b] text-black dark:text-white overflow-hidden">
       {/* Top Glow */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[80%] h-44 bg-gradient-to-r from-indigo-500 via-pink-500 to-purple-500 blur-[140px] opacity-25 z-0 pointer-events-none" />
 
