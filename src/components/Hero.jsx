@@ -82,6 +82,7 @@ const Hero = () => {
             muted
             loop
             playsInline
+            preload="auto"
             className="rounded-xl w-full h-auto max-h-[900px] shadow-xl relative z-10"
           />
           {isDark && (

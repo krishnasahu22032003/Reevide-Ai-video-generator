@@ -40,6 +40,7 @@ const TrustedBySection = () => {
             autoPlay
             loop
             muted
+            preload="auto"
             playsInline
           />
 
