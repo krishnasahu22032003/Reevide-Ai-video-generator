@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import PricingSection from './components/PricingSection '
 import ResourcesSection from './components/ResourcesSection '
 import SolutionsSection from './components/SolutionsSection'
+import TestimonialsSection from './components/TestimonialCard'
 import TrustedBySection from './components/TrustedBySection'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 <ResourcesSection/>
 <PricingSection/>
 <AIAvatarSection/>
+<TestimonialsSection/>
 
     </main>
     </>
