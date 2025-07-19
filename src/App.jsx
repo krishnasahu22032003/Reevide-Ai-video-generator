@@ -1,6 +1,7 @@
 
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import SolutionsSection from './components/SolutionsSection'
 import TrustedBySection from './components/TrustedBySection'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 <Navbar/>
 <Hero/>
 <TrustedBySection/>
+<SolutionsSection/>
 
     </main>
     </>
