@@ -1,4 +1,5 @@
 
+import AIAvatarSection from './components/AIAvatarSection'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import PricingSection from './components/PricingSection '
@@ -17,6 +18,7 @@ function App() {
 <SolutionsSection/>
 <ResourcesSection/>
 <PricingSection/>
+<AIAvatarSection/>
 
     </main>
     </>

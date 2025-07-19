@@ -38,7 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center relative overflow-hidden px-6 bg-white dark:bg-gradient-to-b dark:from-[#0e0e0e] dark:to-[#151515] transition-colors">
+    <section  id="home" className="w-full min-h-screen flex items-center justify-center relative overflow-hidden px-6 bg-white dark:bg-gradient-to-b dark:from-[#0e0e0e] dark:to-[#151515] transition-colors">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 z-10">
         {/* Left Text */}
         <div className="flex flex-col justify-start items-start gap-3 text-left pt-6 md:pt-12 md:pl-6">
